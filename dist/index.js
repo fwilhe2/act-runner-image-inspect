@@ -45,9 +45,9 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const tools = ['node', 'java', 'gcc', 'clang', 'rust'];
-            const allVersions = tools.map(tool => {
+            const allVersions = tools.map(t => {
                 return {
-                    tool: tc.findAllVersions(tool)
+                    t: tc.findAllVersions(t)
                 };
             });
             core.info(`Versions available: ${JSON.stringify(allVersions, undefined, 4)}`);
