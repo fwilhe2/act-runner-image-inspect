@@ -46,7 +46,8 @@ function run() {
         try {
             const tools = [
                 'node',
-                'Java',
+                'Java_Liberica_jdk',
+                'Java_Temurin-Hotspot_jdk',
                 'gcc',
                 'clang',
                 'rust',
