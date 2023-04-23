@@ -45,12 +45,9 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const tools = ['node', 'java', 'gcc', 'clang', 'rust'];
-            const allVersions = tools.map(t => {
-                return {
-                    t: tc.findAllVersions(t)
-                };
-            });
-            core.info(`Versions available: ${JSON.stringify(allVersions, undefined, 4)}`);
+            for (const t of tools) {
+                core.info(`Tool ${t} versions: ${tc.findAllVersions(t)}`);
+            }
         }
         catch (error) {
             if (error instanceof Error)
