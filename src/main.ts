@@ -3,7 +3,17 @@ import * as tc from '@actions/tool-cache'
 
 async function run(): Promise<void> {
   try {
-    const tools = ['node', 'java', 'gcc', 'clang', 'rust']
+    const tools = [
+      'node',
+      'Java',
+      'gcc',
+      'clang',
+      'rust',
+      'Python',
+      'Ruby',
+      'go',
+      'PyPy'
+    ]
     for (const t of tools) {
       core.info(`Tool ${t} versions: ${tc.findAllVersions(t)}`)
     }

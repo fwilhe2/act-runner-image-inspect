@@ -44,7 +44,17 @@ const tc = __importStar(__nccwpck_require__(7784));
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const tools = ['node', 'java', 'gcc', 'clang', 'rust'];
+            const tools = [
+                'node',
+                'Java',
+                'gcc',
+                'clang',
+                'rust',
+                'Python',
+                'Ruby',
+                'go',
+                'PyPy'
+            ];
             for (const t of tools) {
                 core.info(`Tool ${t} versions: ${tc.findAllVersions(t)}`);
             }
