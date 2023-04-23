@@ -1,13 +1,11 @@
 import * as core from '@actions/core'
-
-export async function greeting(name: string): Promise<string> {
-  return `Hello, ${name}!`
-}
+import * as tc from '@actions/tool-cache'
 
 async function run(): Promise<void> {
   try {
-    const guestName = core.getInput('guest_name')
-    core.info(await greeting(guestName))
+    const tools = ['node', 'java', 'gcc', 'clang', 'rust']
+    const allVersions = tools.flatMap(tool => tc.findAllVersions(tool))
+    core.info(`Versions available: ${allVersions}`)
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message)
   }

@@ -1,4 +1,4 @@
-name: 'my-action'
+name: 'act-runner-image-inspect'
 description: 'Provide a description here'
 author: 'Florian Wilhelm'
 inputs:
